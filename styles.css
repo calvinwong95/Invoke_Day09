@@ -1,5 +1,5 @@
 * {
-    margin: 0 auto;
+    margin: 0 ;
     padding: 0;
     box-sizing: border-box;
 }
@@ -10,6 +10,7 @@
     background-color:black;
     border-radius: 10px;
     box-shadow:1px 1px 10px white;
+    margin: 0 auto;
 
     padding: 30px 0px;
     box-sizing: border-box;
@@ -115,6 +116,8 @@
     width: 300px;
     height: 50px;
 
+    padding: 0px 10px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -142,4 +145,34 @@
     width: 2px;
     background-color: white;
     box-shadow: 1px 1px 2px white;
+}
+
+.video-bar-background {
+
+    width: 200px;
+    height: 30px;
+
+
+}
+
+.video-bar {
+    width: 0px ;
+    height: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 5px white;
+
+}
+.video-bar-text{
+    width: 200px;
+    height:25px;
+    line-height:25px;
+    text-align: center;
+    opacity: 0;
+}
+
+.video-bar-text h1 {
+    font-size: 20px;
+    color: white;
+
+    
 }

@@ -1,4 +1,7 @@
 var sng = document.getElementById("sng");
+var vidBar= document.getElementById('video-bar')
+
+var vidTextEnd = document.getElementById("vidTextEnd")
 
 var vol = 1;
 
@@ -143,3 +146,25 @@ function getSong(songData) {
             break;
     }
 }
+
+setInterval (checkTime,1000);
+function checkTime() {
+    var songDuration = sng.duration;
+    var songCurrent = sng.currentTime;
+
+    var timeBarWidth = (( songCurrent/songDuration) * 100);
+
+
+    vidBar.style.width = timeBarWidth +'%';
+    console.log(timeBarWidth);
+    if (timeBarWidth > 20 && timeBarWidth <79) {
+        console.log("its midway");
+        vidTextEnd.style.opacity = "1";
+        console.log(vidTextEnd.style.opacity);
+    } else if (timeBarWidth > 80) {
+        console.log("its finished");
+        vidTextEnd.style.opacity = "0";
+        console.log(vidTextEnd.style.opacity);
+    }
+}
+
