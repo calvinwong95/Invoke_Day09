@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="demo2-styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        
+        <audio id="sng" src="undefined" controls loop autoplay
+        muted ></audio>
+        <br>
+        <div class="btn" onclick="playSng()">Play</div>
+        <div class="btn" onclick="pauseSng()">Pause</div>
+
+        <div id="seekBar">
+            <div id="timeBar"></div>
+        </div>
+
+        <div class="btn" onclick="getSong('songList')">Song 1</div>
+        <div class="btn" onclick="getSong('songList2')">Song 2 </div>
+        <h1 id="titleText">Title</h1>
+        <h4 id="artistText">Artist</h4>
+    </div>
+    <script src="demo2.js"></script>
+</body>
+</html>

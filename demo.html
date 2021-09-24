@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="demo-styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        //traditional way //
+        // setInterval(moveBox, 1000);
+        // function moveBox() {
+        //     console.log("hi!")
+        // }
+
+        // setInterval(function() {
+        //     console.log("running without function name")
+        // }, 1000)
+
+        // var timer = setInterval(function() {
+        //     console.log("using var");
+        // }, 1000)
+        //clearInterval(timer);//
+        
+        var score = 0;
+
+        var box1X = 0;
+
+        var box2Y = 0;
+
+        var box3X = 0;
+        var box3Y = 0;
+        
+        setTimeout(countDown,5000);
+
+        function countDown () {
+            console.log("Run");
+            clearInterval(boxInterval);
+        }
+
+        setTimeout(countDown2,10000);
+
+        function countDown2 () {
+            setInterval(counting,10);
+        }
+
+        var boxInterval = setInterval(counting,10);
+
+
+        function counting() {
+            var scoreText = document.querySelector('h1');
+            score += 1;
+            scoreText.innerHTML = score;
+
+            box1X += 10;
+            document.getElementById("box1").style.left = box1X + 'px';
+
+            if (box1X > 900) {
+                box1X = -100;
+            }
+
+            box2Y += 10;
+            document.getElementById("box2").style.top = box2Y + 'px';
+
+            if (box2Y > 600) {
+                box2Y = - 100;
+            }
+
+            box3X += 10;
+            box3Y += 10;
+            
+            if (box3X > 900) {
+                box3X = -100;
+            }
+            
+            if (box3Y > 600) {
+                box3Y = -100;
+            }
+
+
+            document.getElementById("box3").style.left = box3X + 'px';
+            document.getElementById("box3").style.top = box3Y + 'px';
+        }
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>0</h1>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+* {
+    margin: 0 ;
+    padding: 0 ;
+}
+
+#container {
+    height: 600px;
+    width: 900px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid black;
+
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+#box1 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+}
+
+#box2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+}
+
+#box3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+}
